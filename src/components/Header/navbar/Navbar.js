@@ -4,7 +4,7 @@ import gMenu from '../../../assets/img/g-menu.PNG';
 
 const Navbar = () => {
     return (
-        <div>
+        <div className="n-wrapper">
             <a href="#">Gmail</a>
             <a href="#">Images</a>
             <img alt="" src={gMenu}/>
