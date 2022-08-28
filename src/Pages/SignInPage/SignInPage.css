@@ -37,7 +37,7 @@ h3 {
     font-weight: 400;
 }
 
-input {
+.Fieldset input {
     outline: none;
 }
 
@@ -107,14 +107,14 @@ input {
     transition: 0.4s;
 }
 
-input:focus ~ label.placeholder,
-input:valid ~ label.placeholder {
+.Fieldset > input:focus ~ label.placeholder,
+.Fieldset > input:valid ~ label.placeholder {
     top: 3px;
     font-size: 10px;
     opacity: 0;
 }
 
-input:focus + .Fs-H, input:valid + .Fs-H {
+.Fieldset > input:focus + .Fs-H, input:valid + .Fs-H {
     opacity: 1;
 }
 
