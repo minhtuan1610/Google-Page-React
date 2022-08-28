@@ -1,15 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 import './App.css';
-import Header from './components/Header/Header';
-import Main from './components/Main/Main';
-import Footer from "./components/Footer/Footer";
+import HomePage from './Pages/HomePage/HomePage';
+import SignInPage from "./Pages/SignInPage/SignInPage";
 
 function App() {
+    const [login, setLogin] = useState(false);
     return (
         <div className="App">
-            <Header/>
-            <Main/>
-            <Footer/>
+            {
+                login === false &&
+                <>
+                    <HomePage transitPage={() => setLogin(true)}/>
+                </>
+            }
+            {
+                login === true &&
+                <>
+                    <SignInPage/>
+                </>
+            }
         </div>
     );
 }

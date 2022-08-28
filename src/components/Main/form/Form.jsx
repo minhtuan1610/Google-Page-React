@@ -1,7 +1,7 @@
 import React from "react";
 import './Form.css';
-import searchIcon from '../../UI/img/search.svg'
-import vsIcon from '../../UI/img/vs.png'
+import searchIcon from '../';
+import vsIcon from '../../UI/img/vs.png';
 
 const Form = () => {
     return (
