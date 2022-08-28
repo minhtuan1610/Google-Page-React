@@ -1,10 +1,9 @@
 import React from "react";
 import './Img.css';
-import logo from '../../../assets/img/logo.png';
 
-const Img = () => {
+const Img = ({alt, className, src}) => {
     return (
-        <img alt="" className="logo" src={logo}/>
+        <img alt={alt} className={className} src={src}/>
     );
 }
 export default Img;
