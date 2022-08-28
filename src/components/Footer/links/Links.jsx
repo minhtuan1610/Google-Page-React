@@ -1,19 +1,20 @@
 import React from "react";
 import './Links.css';
+import A from "../../UI/a/A";
 
 const Links = () => {
     return (
         <div className="links">
             <div className="link-1">
-                <a href="#">About</a>
-                <a href="#">Advertising</a>
-                <a href="#">Business</a>
-                <a href="#">How Search works</a>
+                <A label={"About"}/>
+                <A label={"Advertising"}/>
+                <A label={"Business"}/>
+                <A label={"How Search works"}/>
             </div>
             <div className="link-2">
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-                <a href="#">Settings</a>
+                <A label={"Privacy"}/>
+                <A label={"Terms"}/>
+                <A label={"Settings"}/>
             </div>
         </div>
     );
