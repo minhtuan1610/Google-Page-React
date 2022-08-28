@@ -1,6 +1,6 @@
 import React from "react";
 import './Navbar.css';
-import gMenu from '../../../assets/img/g-menu.PNG';
+import gMenu from '../../UI/img/g-menu.PNG';
 
 const Navbar = () => {
     return (
