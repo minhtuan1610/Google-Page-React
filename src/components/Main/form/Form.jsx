@@ -1,18 +1,20 @@
 import React from "react";
 import './Form.css';
-import searchIcon from '../';
-import vsIcon from '../../UI/img/vs.png';
+import searchIcon from '../../../assets/img/search.svg';
+import vsIcon from '../../../assets/img/vs.png';
+import Input from "../../UI/input/Input";
+import Img from "../../UI/img/Img";
 
 const Form = () => {
     return (
         <div>
             <form action=""><br/><br/>
                 <div className="s-box">
-                    <img alt="" className="search-icon" src={searchIcon}/>
-                    <label><input className="s-input" type="text"/></label>
-                    <img alt="" className="vs-icon" src={vsIcon}/>
-                    <input className="s-btn" type="submit" value="Google Search"/>
-                    <input className="s-btn" type="submit" value="I'm Feeling Lucky"/>
+                    <Img className={"search-icon"} src={searchIcon}/>
+                    <label><Input className={"s-input"} type={"text"}/></label>
+                    <Img className={"vs-icon"} src={vsIcon}/>
+                    <Input className={"s-btn"} type={"submit"} value={"Google Search"}/>
+                    <Input className={"s-btn"} type={"submit"} value={"I'm Feeling Lucky"}/>
                 </div>
             </form>
         </div>
