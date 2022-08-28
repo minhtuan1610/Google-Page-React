@@ -2,9 +2,9 @@ import React from "react";
 import './Header.css';
 import Navbar from './navbar/Navbar';
 
-function Header() {
+function Header(props) {
     return (
-        <Navbar/>
+        <Navbar {...props}/>
     );
 }
 
