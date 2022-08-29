@@ -1,3 +1,9 @@
 .main {
     flex: 1px;
 }
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    margin-top: 107px;
+}
