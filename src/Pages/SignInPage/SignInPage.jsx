@@ -5,7 +5,7 @@ import Img from "../../components/UI/img/Img";
 import Input from "../../components/UI/input/Input";
 import Button from "../../components/UI/button/Button";
 
-function SignInPage() {
+function SignInPage(props) {
     return (
         <div className="mainDiv">
             <Img src={logo}/>
@@ -27,7 +27,7 @@ function SignInPage() {
                     </div>
                 </div>
             </div>
-            <Button label={"Login"}/>
+            <Button children={"Login"} handleClick={props.isLoggedIn}/>
         </div>
     );
 }
