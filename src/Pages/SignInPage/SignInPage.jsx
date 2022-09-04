@@ -14,14 +14,14 @@ function SignInPage(props) {
             <div className="inputs">
                 <div className="Fields">
                     <div className="Fieldset">
-                        <Input autoComplete={"off"} className={"Before-FS"} type={"text"} required={""}/>
+                        <Input onChange={props.inputUsr} autoComplete={"off"} className={"Before-FS"} type={"text"} required={""}/>
                         <h1 className="Fs-H"><span>Email or phone</span></h1>
                         <label className="placeholder">Email or phone</label>
                     </div>
                 </div>
                 <div className="Fields">
                     <div className="Fieldset">
-                        <Input className={"Before-FS"} required={""} type={"password"}/>
+                        <Input onChange={props.inputPw} className={"Before-FS"} required={""} type={"password"}/>
                         <h1 className="Fs-H"><span>Password</span></h1>
                         <label className="placeholder">Password</label>
                     </div>
