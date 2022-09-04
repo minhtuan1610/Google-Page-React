@@ -4,21 +4,35 @@ import HomePage from './Pages/HomePage/HomePage';
 import SignInPage from "./Pages/SignInPage/SignInPage";
 
 function App() {
-    const [login, setLogin] = useState(false);
+    const [goLogin, setgoLogin] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    console.log("goLoginPage: " + goLogin);
+
+    console.log("isLoggedIn: " + isLoggedIn);
+
+    const goLoginPage = () => {
+        return (
+            setgoLogin(!goLogin)
+        );
+    }
+    const signedIn = () => {
+        return (
+            setIsLoggedIn(!isLoggedIn) &
+            setgoLogin(!goLogin)
+        );
+    }
+    const signedOut = () => {
+        return (
+            setIsLoggedIn(!isLoggedIn)
+        );
+    }
+
     return (
         <div className="App">
-            {
-                login === false &&
-                <>
-                    <HomePage transitPage={() => setLogin(true)}/>
-                </>
-            }
-            {
-                login === true &&
-                <>
-                    <SignInPage/>
-                </>
-            }
+            {(goLogin === false) ? <HomePage goLoginPage={goLoginPage}
+                                             isLoggedIn={isLoggedIn}
+                                             isLoggedOut={signedOut}/> : <SignInPage isLoggedIn={signedIn}/>}
         </div>
     );
 }
