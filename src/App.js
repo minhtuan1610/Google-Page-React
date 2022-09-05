@@ -19,19 +19,17 @@ function App() {
         );
     }
     const signedIn = () => {
-        return (
-            setIsLoggedIn(!isLoggedIn) &
-            setGoLogin(!goLogin) &
-            localStorage.setItem('Username', usr) &
-            localStorage.setItem('Password', pw)
-        );
+        setIsLoggedIn(!isLoggedIn)
+        setGoLogin(!goLogin)
+        localStorage.setItem('isLoggedIn', 'true')
+        localStorage.setItem('Username', usr)
+        localStorage.setItem('Password', pw);
     }
     const signedOut = () => {
-        return (
-            setIsLoggedIn(!isLoggedIn) &
-            localStorage.removeItem('Username') &
-            localStorage.removeItem('Password')
-        );
+        setIsLoggedIn(!isLoggedIn)
+        localStorage.setItem('isLoggedIn', 'false')
+        localStorage.removeItem('Username')
+        localStorage.removeItem('Password');
     }
     const inputUsr = (e) => {
         return (
@@ -44,9 +42,8 @@ function App() {
         );
     }
     useEffect(() => {
-        localStorage.getItem('Username', usr);
-        localStorage.getItem('Password', pw);
-    }, [usr, pw]);
+        setIsLoggedIn(JSON.parse(localStorage.getItem('isLoggedIn')));
+    }, []);
 
     return (
         <div className="App">
